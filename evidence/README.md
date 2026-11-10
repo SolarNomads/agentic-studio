@@ -1,0 +1,30 @@
+# Evidence index
+
+Every number in the README and case studies has a row here: what it is, where it comes from, when it was pulled, and how to re-check it. "Private source" means a file in the private working repository (path given so it can be shown on a screen share); "extract" means an aggregate copy committed in this folder. Dates are 2026. UTC unless stated. Nothing here contains audience data, messages, or account identifiers.
+
+Regenerate every Instagram figure from the extracts: `python3 scripts/derive_ig_metrics.py report`.
+
+| ID | Number | Source | Pulled | Public re-check |
+|---|---|---|---|---|
+| <a id="e1"></a>E1 | Followers 3,179 (3 Nov 12:35) to 5,704 (10 Nov 17:36): +2,525, +79.4%, 7.2 days. First reading 297 (29 Oct 10:30). The studio's daily digest shows 5,671 at 10 Nov 17:10; the log's later reading is 5,704. | Extract [ig_followers.csv](ig_followers.csv). Private source `team/metrics/ig_account.csv`, `ig.csv`, digest `team/metrics/daily/2026-11-10.json` | 10 Nov | Profile page follower count (will now be higher) |
+| <a id="e2"></a>E2 | Account views, trailing 7 days: 903,595 (read 10 Nov 02:33); first logged 217,259 (1 Nov 12:35); peak 1,066,326 (7 Nov 19:28). About 98% from non-followers (98.2%). | Extract [ig_account_7d.csv](ig_account_7d.csv); private `team/metrics/ig_account.csv` | 10 Nov | Not public (platform insight screen; screen share on request) |
+| <a id="e3"></a>E3 | Best reel 676,060 views (posted 31 Oct); 5 of 17 tracked reels above 10,000 views; reel list with views, likes, saves, shares | Extract [ig_reels_latest.csv](ig_reels_latest.csv); private `team/metrics/ig.csv` | latest reading per reel, 10 Nov 02:33 for the top five | Each reel URL is public; view counters are shown on the reel |
+| <a id="e4"></a>E4 | Profile visits 2,051 and link taps 81, trailing 7 days | Extract ig_account_7d.csv (last row) | 10 Nov 02:33 | Not public |
+| <a id="e5"></a>E5 | Google Search Console clicks per 7 days, ashramatlas.com: 25 (21-27 Oct) to 73 (2-8 Nov); impressions 1,404 to 4,355. gofreealts.com: 3 clicks / 123 impressions (22-27 Oct), 6 / 507 (2-8 Nov) | Extract [search_console.csv](search_console.csv); private `team/metrics/sites.csv` (script [extract_search_console.py](../scripts/extract_search_console.py)) | logged 29 Oct to 10 Nov | Not public (Search Console); screen share on request |
+| <a id="e6"></a>E6 | 42 ashram profile pages; 153 URLs in the sitemap | Public sitemap; private `sites/ashramatlas/data/ashrams/` (42 JSON files) | 10 Nov | `curl -s https://ashramatlas.com/sitemap.xml \| grep -c "<loc>"` |
+| <a id="e7"></a>E7 | Watch index: 738 videos in public data.json. Build stats (1 Nov): 91,670 HN items scanned; 61,226 comments with a YouTube link; 1,540 niche candidates; 1,814 model-reviewed; 740 kept (413 public export, 327 own pull) | Private `sites/gofreealts/data/watch.json` (stats block) | 1 Nov build; 10 Nov check | `curl -s https://gofreealts.com/watch/data.json` (list `videos`) |
+| <a id="e8"></a>E8 | Seat benchmark: roles writer, scout, miner, critic, animator (not yet run), ux, builder, footage across Claude Code, Codex, Hermes, Grok. Examples: writer 0.94 on three tools, builder 1.00 on three and 0.67 on one, scout 1.00 on two | Private `team/studio/harness/BENCH-RESULTS.md` | 9 Nov | Not public; scorers are deterministic scripts and can be re-run |
+| <a id="e9"></a>E9 | Dispatch log: 346 lines, 11 fallback runs, 12 failed attempts, 108 bench attempts | Private `team/studio/harness/runs.jsonl` | 9-10 Nov | Not public |
+| <a id="e10"></a>E10 | Judge agreement: 27/41 = 65.9% (95% interval 50.5-78.4) on exact-question pairs; 50.0-51.9% at chance on the first, different question (60 pairs, one judge 46.7%); 72.9% (52.9-86.6) on 24 outcome pairs, another judge 68.8% (48.8-83.6), a third 50% on 16 pairs. Small samples: smoke tests only | Private `team/studio/taste/TASTE-BRAIN.md`, `team/studio/STATE.md` (outcome-pair engine, run report) | 10 Nov | Not public |
+| <a id="e11"></a>E11 | Tests: notes app 213 unit tests (release hn-v61); reel gates 16/16 checks; daily metrics 12 tests; X tools 17 tests | Private `sites/hatha-notes/docs/hatha-notes-v61-handoff.md`; `tools/reel/tests/run_tests.py`; `tools/metrics/test_daily.py`; `tools/x/` | 9 Nov (notes); 10 Nov (others, re-run) | Samples in [../samples](../samples) run with `python3 file.py` |
+| <a id="e12"></a>E12 | Reel library: 99 versions of 30 reels | Private `team/studio/library/reels.jsonl` (via `tools/reel/library_index.py`) | 10 Nov | Not public |
+| <a id="e13"></a>E13 | UX gate first measurement (390x844): Today page 36/36 tap targets, 9 text nodes under 13 px, 12 below contrast floor; Jobs dark 17 below floor | Private `tools/ux/README.md` | 9 Nov | Not public (dashboard is private) |
+| <a id="e14"></a>E14 | Notes app releases hn-v56 (8 Nov) to hn-v61 (9 Nov), about 120 commits to the app folder 3-9 Nov | Private `sites/hatha-notes/docs/*handoff.md`, git log | 10 Nov | Public web app and installer page: `https://notes.ashramatlas.com/` |
+| <a id="e15"></a>E15 | X loop first run: 6 candidates logged, 5 dropped by the gate, 1 dry run, 0 posted | Private `team/x/log.jsonl` | 10 Nov | Not public |
+| <a id="e16"></a>E16 | Rules smoke test: all 4 tools answered correctly | Private `team/studio/harness/RULES-SMOKE.md` | 9 Nov | Not public; script re-runnable |
+
+## Notes on method
+- Followers are the readings the studio logged (some days have none); the chart shows dots for that reason.
+- "Trailing 7 days" views are the platform's own account-level figure at the time of reading, not a sum of reels. The sum of the 17 tracked reels' lifetime views is 1,183,820 (mixed read dates), shown only as a cross-check.
+- Search Console windows are as logged by the script (some are labelled 28d but cover fewer days on a young site); only 7-day windows are quoted.
+- Costs and revenue are not reported: the work is pre-revenue.

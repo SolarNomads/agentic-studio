@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" font-family="Helvetica,Arial,sans-serif">
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="56" y="26" font-size="13" font-weight="600" fill="#222">Followers (each dot = one reading)</text>
+<line x1="56" y1="144" x2="740" y2="144" stroke="#bbb"/>
+<line x1="56" y1="93.1" x2="740" y2="93.1" stroke="#eee"/>
+<text x="50" y="97.1" font-size="11" text-anchor="end" fill="#555">2,852</text>
+<line x1="56" y1="42.1" x2="740" y2="42.1" stroke="#eee"/>
+<text x="50" y="46.1" font-size="11" text-anchor="end" fill="#555">5,704</text>
+<polyline points="56.0,138.7 60.8,138.7 72.4,138.7 84.0,138.7 116.5,138.7 227.7,131.9 239.3,125.5 250.9,122.6 283.5,114.4 294.9,108.4 306.5,105.0 339.0,87.2 350.6,79.6 362.2,77.0 394.6,71.5 577.4,56.6 584.7,56.4 617.1,55.2 628.7,54.3 640.3,53.9 672.7,51.9 684.3,50.9 695.9,50.2 705.1,49.8 728.8,46.8 740.0,42.1" fill="none" stroke="#1b6ca8" stroke-width="2"/>
+<circle cx="56.0" cy="138.7" r="2.5" fill="#1b6ca8"/>
+<circle cx="60.8" cy="138.7" r="2.5" fill="#1b6ca8"/>
+<circle cx="72.4" cy="138.7" r="2.5" fill="#1b6ca8"/>
+<circle cx="84.0" cy="138.7" r="2.5" fill="#1b6ca8"/>
+<circle cx="116.5" cy="138.7" r="2.5" fill="#1b6ca8"/>
+<circle cx="227.7" cy="131.9" r="2.5" fill="#1b6ca8"/>
+<circle cx="239.3" cy="125.5" r="2.5" fill="#1b6ca8"/>
+<circle cx="250.9" cy="122.6" r="2.5" fill="#1b6ca8"/>
+<circle cx="283.5" cy="114.4" r="2.5" fill="#1b6ca8"/>
+<circle cx="294.9" cy="108.4" r="2.5" fill="#1b6ca8"/>
+<circle cx="306.5" cy="105.0" r="2.5" fill="#1b6ca8"/>
+<circle cx="339.0" cy="87.2" r="2.5" fill="#1b6ca8"/>
+<circle cx="350.6" cy="79.6" r="2.5" fill="#1b6ca8"/>
+<circle cx="362.2" cy="77.0" r="2.5" fill="#1b6ca8"/>
+<circle cx="394.6" cy="71.5" r="2.5" fill="#1b6ca8"/>
+<circle cx="577.4" cy="56.6" r="2.5" fill="#1b6ca8"/>
+<circle cx="584.7" cy="56.4" r="2.5" fill="#1b6ca8"/>
+<circle cx="617.1" cy="55.2" r="2.5" fill="#1b6ca8"/>
+<circle cx="628.7" cy="54.3" r="2.5" fill="#1b6ca8"/>
+<circle cx="640.3" cy="53.9" r="2.5" fill="#1b6ca8"/>
+<circle cx="672.7" cy="51.9" r="2.5" fill="#1b6ca8"/>
+<circle cx="684.3" cy="50.9" r="2.5" fill="#1b6ca8"/>
+<circle cx="695.9" cy="50.2" r="2.5" fill="#1b6ca8"/>
+<circle cx="705.1" cy="49.8" r="2.5" fill="#1b6ca8"/>
+<circle cx="728.8" cy="46.8" r="2.5" fill="#1b6ca8"/>
+<circle cx="740.0" cy="42.1" r="2.5" fill="#1b6ca8"/>
+<text x="736.0" y="34.1" font-size="11" text-anchor="end" fill="#1b6ca8">5,704</text>
+<text x="56" y="188" font-size="13" font-weight="600" fill="#222">Account views, trailing 7 days (as reported by the platform)</text>
+<line x1="56" y1="286" x2="740" y2="286" stroke="#bbb"/>
+<line x1="56" y1="244.3" x2="740" y2="244.3" stroke="#eee"/>
+<text x="50" y="248.3" font-size="11" text-anchor="end" fill="#555">533k</text>
+<line x1="56" y1="202.7" x2="740" y2="202.7" stroke="#eee"/>
+<text x="50" y="206.7" font-size="11" text-anchor="end" fill="#555">1066k</text>
+<polyline points="250.9,269.0 306.5,269.0 362.2,243.7 394.6,227.6 584.7,202.7 640.3,216.9 695.9,215.4 705.1,215.4" fill="none" stroke="#b5541c" stroke-width="2"/>
+<circle cx="250.9" cy="269.0" r="2.5" fill="#b5541c"/>
+<circle cx="306.5" cy="269.0" r="2.5" fill="#b5541c"/>
+<circle cx="362.2" cy="243.7" r="2.5" fill="#b5541c"/>
+<circle cx="394.6" cy="227.6" r="2.5" fill="#b5541c"/>
+<circle cx="584.7" cy="202.7" r="2.5" fill="#b5541c"/>
+<circle cx="640.3" cy="216.9" r="2.5" fill="#b5541c"/>
+<circle cx="695.9" cy="215.4" r="2.5" fill="#b5541c"/>
+<circle cx="705.1" cy="215.4" r="2.5" fill="#b5541c"/>
+<text x="701.1" y="207.4" font-size="11" text-anchor="end" fill="#b5541c">904k</text>
+<text x="56" y="320" font-size="11" fill="#555">29 Oct 2026 to 10 Nov 2026 (UTC). Source: evidence/ig_followers.csv, evidence/ig_account_7d.csv</text>
+</svg>
