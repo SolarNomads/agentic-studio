@@ -26,7 +26,7 @@ flowchart LR
 ```
 
 - **Seats and dispatch:** one file maps role to tool, model, fallback, effort and per-task cap; a seat changes only on a benchmark result or a quota incident. See [samples/dispatch_fallback.py](../samples/dispatch_fallback.py).
-- **Benches:** per role, a task set and a deterministic scorer, run across the Solar Agentic Team's agentic-tool adapters.
+- **Benches:** per role, a task set and a deterministic scorer, run across the agent adapters of the team's homemade agentic stack.
 - **Quality gates** (on the encoded video): card legibility (perceptual contrast floor by size and weight, [sample](../samples/apca_contrast.py)), card-to-voice sync, platform safe zones, text fitting, motion QC for animated beats, sourced-facts table, own-work share and credits, cover wording, and an autopost gate that treats missing evidence as a failure ([sample](../samples/evidence_gate.py)).
 - **Animation lab:** a Remotion-based kit that reads style tokens, a shot-spec JSON written by the director, and a script that renders and measures every beat (events per 2.5 s, route overlap, label overlap).
 - **Trial-reel loop:** one thesis per test, one variable changed (cover, first 3 s, narration, music, lettering, length), variants gated like any piece, results read back into the format rules.

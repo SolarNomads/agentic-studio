@@ -6,7 +6,7 @@ This repository is the evidence for that work. Every number below carries a date
 
 ## What the studio is
 
-A multi-agent production setup running on one Mac mini. The Solar Agentic Team: several agentic tools sit in named roles (scout, miner, writer, builder, reviewer, critic, animator). Roles are assigned by benchmark, not by habit; a script dispatches work, falls back to a second tool on quota errors, and logs every call. Nothing is published unless a gate script proves the piece is good.
+A multi-agent production setup running on one Mac mini. The Solar Agentic Team runs on a homemade agentic stack: our own dispatcher, quality gates and benchmarks, with several AI agents sitting in named roles (scout, miner, writer, builder, reviewer, critic, animator). Roles are assigned by benchmark, not by habit; a script dispatches work, falls back to a second tool on quota errors, and logs every call. Nothing is published unless a gate script proves the piece is good.
 
 It currently runs one Instagram account, two content sites, a notes app, a phone control dashboard, and a taste-evaluation project.
 

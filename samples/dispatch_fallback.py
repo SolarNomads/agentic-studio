@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Seat dispatch with quota fallback and a usage guard (simplified from the studio's dispatch.sh).
 
-Idea: every studio role ("seat") is assigned to one agent harness (one of the team's agentic tools,
+Idea: every studio role ("seat") is assigned to one agent harness (one of the agents in the team's homemade agentic stack,
 each run as a CLI). A seat has one fallback. The dispatcher
   1. skips the primary and goes straight to the fallback when a usage guard says the primary's
      quota pool is running hot (and the role is not exempt),
