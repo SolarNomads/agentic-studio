@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Seat dispatch with quota fallback and a usage guard (simplified from the studio's dispatch.sh).
 
-Idea: every studio role ("seat") is assigned to one agent harness (a CLI such as Codex,
-Hermes or Grok). A seat has one fallback. The dispatcher
+Idea: every studio role ("seat") is assigned to one agent harness (one of the team's agentic tools,
+each run as a CLI). A seat has one fallback. The dispatcher
   1. skips the primary and goes straight to the fallback when a usage guard says the primary's
      quota pool is running hot (and the role is not exempt),
   2. otherwise runs the primary; on a quota error (exit 429) or any failure it runs the fallback ONCE,
@@ -14,9 +14,9 @@ import json
 import time
 
 SEATS = {
-    "writer":   {"harness": "codex",  "fallback": {"harness": "primary"}},
-    "critic":   {"harness": "primary", "fallback": {"harness": "codex"}},
-    "animator": {"harness": "primary", "fallback": {"harness": "codex"}},
+    "writer":   {"harness": "secondary",  "fallback": {"harness": "primary"}},
+    "critic":   {"harness": "primary", "fallback": {"harness": "secondary"}},
+    "animator": {"harness": "primary", "fallback": {"harness": "secondary"}},
 }
 GUARD_EXEMPT = {"critic", "reviewer"}   # cheap read-only roles may keep using the hot pool
 GUARD_PCT = 50.0
@@ -55,17 +55,17 @@ if __name__ == "__main__":
     ok = lambda p: (0, "done")
     quota = lambda p: (429, "")
     # 1. primary works -> one attempt
-    r = dispatch("writer", "x", {"codex": ok, "primary": ok})
+    r = dispatch("writer", "x", {"secondary": ok, "primary": ok})
     assert r[0] and [a["attempt"] for a in r[2]] == ["primary"]
     # 2. primary hits quota -> fallback runs once
-    r = dispatch("writer", "x", {"codex": quota, "primary": ok})
+    r = dispatch("writer", "x", {"secondary": quota, "primary": ok})
     assert r[0] and [a["attempt"] for a in r[2]] == ["primary", "fallback"] and r[2][0]["incident"] == "quota"
     # 3. both fail -> reported failure, still only two attempts
-    r = dispatch("writer", "x", {"codex": quota, "primary": quota})
+    r = dispatch("writer", "x", {"secondary": quota, "primary": quota})
     assert not r[0] and len(r[2]) == 2
-    # 4. guard: primary pool at 54 % -> animator goes straight to codex; critic is exempt
-    r = dispatch("animator", "x", {"primary": ok, "codex": ok}, usage_pct=54)
-    assert [a["harness"] for a in r[2]] == ["codex"] and r[2][0]["guard"] == "primary_usage"
-    r = dispatch("critic", "x", {"primary": ok, "codex": ok}, usage_pct=54)
+    # 4. guard: primary pool at 54 % -> animator goes straight to secondary; critic is exempt
+    r = dispatch("animator", "x", {"primary": ok, "secondary": ok}, usage_pct=54)
+    assert [a["harness"] for a in r[2]] == ["secondary"] and r[2][0]["guard"] == "primary_usage"
+    r = dispatch("critic", "x", {"primary": ok, "secondary": ok}, usage_pct=54)
     assert [a["harness"] for a in r[2]] == ["primary"]
     print("dispatch_fallback: 5 checks passed")
