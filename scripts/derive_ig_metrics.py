@@ -34,8 +34,12 @@ def extract(src):
     reels = list(csv.DictReader(open(src / "ig.csv", newline="")))
     EV.mkdir(exist_ok=True)
 
-    # 1. follower readings: every distinct (timestamp, followers) pair from both logs
+    # 1. follower readings: every distinct (timestamp, followers) pair from both logs and the raw daily snapshots
     pts = {}
+    for fp in sorted((src / "raw").glob("ig_2026*.json")):
+        d = json.load(open(fp))
+        if num(d.get("followers")) is not None and d.get("read_at"):
+            pts[d["read_at"][:16] + "Z"] = num(d["followers"])
     for r in acct:
         if num(r["followers"]) is not None:
             pts[r["read_at"][:16] + "Z"] = num(r["followers"])
@@ -50,12 +54,14 @@ def extract(src):
 
     # 2. account insights, 7-day window, only rows that carry values
     cols = ["views", "viewers", "interactions", "profile_visits", "link_taps"]
+    d30 = {r["read_at"]: r["views_nonfollowers_pct"] for r in acct if r["window"] == "d30"}
     with open(EV / "ig_account_7d.csv", "w", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["read_at_utc"] + cols)
+        w.writerow(["read_at_utc"] + cols + ["nonfollower_views_pct_7d", "nonfollower_views_pct_30d"])
         for r in acct:
             if r["window"] == "d7" and num(r["views"]) is not None:
-                w.writerow([r["read_at"][:16] + "Z"] + [num(r[c]) for c in cols])
+                w.writerow([r["read_at"][:16] + "Z"] + [num(r[c]) for c in cols]
+                           + [r["views_nonfollowers_pct"], d30.get(r["read_at"], "")])
 
     # 3. per-reel public counters, latest reading per reel
     latest = {}
@@ -128,6 +134,8 @@ def report():
     out["views7d_peak"] = max(a, key=lambda p: p[1])
     out["views7d_first"] = a[0]
     last = acc[-1]
+    out["nonfollower_pct_7d_30d"] = (last["nonfollower_views_pct_7d"], last["nonfollower_views_pct_30d"], last["read_at_utc"])
+    out["days_first_to_last"] = round((ts(fol[-1][0]) - ts(fol[0][0])).total_seconds() / 86400, 1)
     out["profile_visits_7d_latest"] = int(last["profile_visits"])
     out["link_taps_7d_latest"] = int(last["link_taps"])
     out["reels_tracked"] = len(reels)

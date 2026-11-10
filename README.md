@@ -14,7 +14,8 @@ It currently runs one Instagram account, two content sites, a notes app, a phone
 
 | Result | Value | Date range / as of | Evidence |
 |---|---|---|---|
-| Instagram followers (@solar_list) | 3,179 to 5,704 (+2,525, +79.4%) in 7.2 days | 3 Nov 12:35 UTC to 10 Nov 17:36 UTC 2026 | [E1](evidence/README.md#e1) |
+| Instagram followers (@solar_list) | **297 to 5,704 in 12 days**, organic only, no ads (owner statement) | 29 Oct 10:19 UTC to 10 Nov 17:36 UTC 2026 | [E1](evidence/README.md#e1), [E17](evidence/README.md#e17) |
+| Same, strongest week | 3,179 to 5,704 (+2,525, +79.4%) in 7.2 days | 3 Nov 12:35 UTC to 10 Nov 17:36 UTC 2026 | [E1](evidence/README.md#e1) |
 | Account views, trailing 7 days | 903,595 (first logged reading 217,259 on 1 Nov; peak 1,066,326 on 7 Nov) | read 10 Nov 02:33 UTC 2026 | [E2](evidence/README.md#e2) |
 | Best single reel | 676,060 views; 5 of 17 tracked reels above 10,000 | read 10 Nov 2026 | [E3](evidence/README.md#e3) |
 | Profile visits / link taps, 7 days | 2,051 / 81 | read 10 Nov 2026 | [E4](evidence/README.md#e4) |
@@ -26,6 +27,8 @@ It currently runs one Instagram account, two content sites, a notes app, a phone
 | Judge agreement with a human (small samples) | 65.9% on 41 pairs; 72.9% on 24 pairs | 10 Nov 2026 | [E10](evidence/README.md#e10) |
 | Automated test suites | 213 (notes app), 16 (reel gates), 12 (metrics), 17 (X tools) | 9-10 Nov 2026 | [E11](evidence/README.md#e11) |
 | Reel library | 99 versions of 30 reels tracked | 10 Nov 2026 | [E12](evidence/README.md#e12) |
+
+Method on the Instagram account: niche reels plus scheduled community engagement; 98.2% of the trailing-7-day views came from non-followers (98.5% over 30 days), read 10 Nov 2026 02:33 UTC ([E2](evidence/README.md#e2)). The account owner states that work on the account began in the last week of October at roughly 220 followers, before daily tracking started; that is the owner's account, not measured data.
 
 Revenue: pre-revenue. These are traffic and process results from the first weeks of the studio, not business results, and the sample sizes are small. I state that on purpose.
 
