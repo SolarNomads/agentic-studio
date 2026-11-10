@@ -9,7 +9,7 @@ Repository link to use once public: `https://github.com/SolarNomads/agentic-stud
    **Link:** case-studies/content-studio.md
 
 2. **Title:** Instagram: 297 to 5,704 followers in 12 days, organic, with verifiable numbers
-   **Description:** One account, niche reels plus scheduled community engagement, no ads (owner statement); metrics logged to CSV and re-derived by script (29 Oct 10:19 to 10 Nov 17:36 UTC 2026). Public reel counters let you verify; 1.21M views in 30 days (98.4% from non-followers, Instagram Insights, 11 Nov 2026).
+   **Description:** One account, niche reels plus scheduled community engagement, no ads (owner statement); metrics logged to CSV and re-derived by script (29 Oct 10:19 to 10 Nov 17:36 UTC 2026). Public reel counters let you verify; ~1.2M views in 12 days (31 Oct to 11 Nov 2026; 98.4% from non-followers; Instagram Insights, 11 Nov 2026).
    **Link:** case-studies/instagram-growth.md
 
 3. **Title:** Agent ops: shared rules, playbooks and a phone dashboard

@@ -22,11 +22,11 @@ All figures re-derived from the CSV extracts in [evidence/](../evidence/) by `py
 
 Latest point, text only: 5,794 followers on the profile on 11 Nov 2026 (owner screenshot, [E18](../evidence/README.md#e18)). The platform's own "net followers" tile is not used here; the series above is our measured one.
 
-Instagram Insights, 30-day window, owner screenshots 11 Nov 2026 (not in this repository; available on request):
+Instagram Insights, 30-day window (Instagram's range; the views were earned in about 12 days, 31 Oct to 11 Nov 2026), owner screenshots 11 Nov 2026 (not in this repository; available on request). Our snapshots show under 10,000 views in total before 31 Oct (9,367 across 13 items, latest reading per item as of 30 Oct 22:35 UTC, [E19](../evidence/README.md#e19)):
 
 | Figure | Value |
 |---|---|
-| Views | 1,213,825 (98.4% non-followers, 1.6% followers); about 1.2M from reels, about 8K from posts |
+| Views, "~1.2M in 12 days" | 1,213,825 (98.4% non-followers, 1.6% followers); about 1.2M from reels, about 8K from posts |
 | Accounts reached | 796,412 |
 | Interactions | 112,136 |
 

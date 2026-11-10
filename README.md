@@ -16,7 +16,7 @@ It currently runs one Instagram account, two content sites, a notes app, a phone
 |---|---|---|---|
 | Instagram followers (@solar_list) | **297 to 5,704 in 12 days**, organic only, no ads (owner statement) | 29 Oct 10:19 UTC to 10 Nov 17:36 UTC 2026 | [E1](evidence/README.md#e1), [E17](evidence/README.md#e17) |
 | Same, strongest week | 3,179 to 5,704 (+2,525, +79.4%) in 7.2 days | 3 Nov 12:35 UTC to 10 Nov 17:36 UTC 2026 | [E1](evidence/README.md#e1) |
-| Account views, 30 days | **1.21M views (1,213,825), 98.4% from non-followers**; 796,412 accounts reached | Instagram Insights, owner screenshots 11 Nov 2026 | [E18](evidence/README.md#e18) |
+| Account views | **~1.2M views in 12 days (31 Oct - 11 Nov 2026), 98.4% from non-followers**; 796,412 accounts reached (footnote below) | Instagram Insights, owner screenshots 11 Nov 2026 | [E18](evidence/README.md#e18), [E19](evidence/README.md#e19) |
 | Account views, trailing 7 days | 903,595 (first logged reading 217,259 on 1 Nov; peak 1,066,326 on 7 Nov) | our log, read 10 Nov 02:33 UTC 2026 | [E2](evidence/README.md#e2) |
 | Best single reel | 676,060 views in our log (10 Nov 02:33 UTC); 694K in Insights 30-day view (11 Nov); 5 of 17 tracked reels above 10,000 in our log | 10-11 Nov 2026 | [E3](evidence/README.md#e3), [E18](evidence/README.md#e18) |
 | Profile visits / link taps, 7 days | 2,051 / 81 | read 10 Nov 2026 | [E4](evidence/README.md#e4) |
@@ -30,6 +30,8 @@ It currently runs one Instagram account, two content sites, a notes app, a phone
 | Reel library | 99 versions of 30 reels tracked | 10 Nov 2026 | [E12](evidence/README.md#e12) |
 
 Method on the Instagram account: niche reels plus scheduled community engagement; 98.2% of the trailing-7-day views came from non-followers (98.5% over 30 days), read 10 Nov 2026 02:33 UTC ([E2](evidence/README.md#e2)). The account owner states that work on the account began in the last week of October at roughly 220 followers, before daily tracking started; that is the owner's account, not measured data.
+
+Footnote: Instagram Insights reports 1,213,825 for its 30-day window; our snapshots show under 10,000 views in that window before 31 Oct (9,367 across 13 items, latest reading per item as of 30 Oct 22:35 UTC; [E19](evidence/README.md#e19)).
 
 Latest follower count seen on the profile: 5,794 on 11 Nov 2026 (owner screenshot). The headline stays our measured series.
 
